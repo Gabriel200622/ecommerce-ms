@@ -1,0 +1,109 @@
+Todo:
+- Images in reviews
+- Improve auth middleware (user.middleware.ts, require-auth.ts)
+- 
+- 
+- 
+- 
+- 
+- 
+
+
+
+
+
+Fix now:
+- 
+- 
+- 
+- 
+- 
+
+
+
+
+
+Services:
+- User Service (User,)
+- Products Service (User,Product,Review,Category,)
+- Cart Service (Cart,CartItem,)
+- Inventory management Service ()
+- Orders Service (Order,OrderItem,)
+- Reviews Service (Review,)
+- Payment Service ()
+- Recommendations Service ()
+- Notifications Service ()
+- Search Service ()
+- Analytics Service ()
+- Shipping and Logistics Service ()
+- History Service ()
+- 
+- 
+- 
+
+
+
+Requirements:
+- Search for a product
+- Recommendations on Homepage
+- Add items to the cart
+- Remove items from the cart
+- Add an address
+- Place Order (for me or a gift)
+- Check Order status
+- Write/Review product reviews
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Un microservicio de Inventario en una arquitectura de e-commerce se encarga de gestionar y controlar la disponibilidad de los productos que se ofrecen en la plataforma. Su objetivo principal es garantizar que se pueda llevar un registro preciso del stock de productos y evitar problemas como la sobreventa o la falta de disponibilidad de productos. A continuación, se describe cómo podría ser un microservicio de Inventario:
+
+#### Funcionalidades del Microservicio de Inventario:
+
+1. **Almacenamiento de Datos de Inventario:** El microservicio almacena información sobre los productos disponibles, como identificadores únicos de productos, cantidades en stock, ubicación de almacenamiento, SKU (Stock Keeping Unit), y cualquier otra información relevante.
+
+2. **Actualización de Stock:** Gestiona la actualización del stock en tiempo real en respuesta a eventos, como compras, devoluciones o cambios en el nivel de inventario. Esto garantiza que el inventario refleje con precisión la disponibilidad de productos.
+
+3. **Reserva de Inventario:** Reserva temporalmente productos en stock cuando se agregan al carrito de compras, evitando la sobreventa del mismo producto a varios clientes.
+
+4. **Notificación de Niveles Críticos:** Supervisa los niveles de stock y notifica a otros servicios, como el servicio de Catálogo de Productos o el servicio de Órdenes, cuando se alcanzan niveles críticos que podrían requerir una reposición.
+
+5. **Gestión de Devoluciones:** Administra el proceso de devoluciones y actualiza el stock en consecuencia cuando los productos son devueltos por los clientes.
+
+6. **Sincronización con Proveedores:** Interactúa con proveedores externos para realizar pedidos de reposición de productos agotados o con bajo stock.
+
+7. **Historial de Movimientos:** Mantiene un registro de todos los movimientos de inventario, incluyendo ventas, devoluciones, reposiciones, ajustes y transferencias de stock.
+
+#### Tecnologías Comunes:
+
+- **Base de Datos:** Puede utilizar una base de datos relacional (como MySQL) o una base de datos NoSQL (como MongoDB) para almacenar la información de inventario.
+
+- **Cola de Mensajes:** Se pueden utilizar sistemas de colas de mensajes (por ejemplo, RabbitMQ o Apache Kafka) para procesar eventos de manera asíncrona y mantener actualizado el inventario.
+
+- **API REST:** Proporciona una interfaz de programación de aplicaciones (API) RESTful para que otros servicios accedan y actualicen el inventario.
+
+- **Caché:** Puede implementar una capa de caché para mejorar el rendimiento al consultar información de inventario con alta demanda.
+
+- **Notificaciones:** Utiliza sistemas de notificación para informar a otros servicios sobre eventos relacionados con el inventario.
+
+Un microservicio de Inventario es esencial para garantizar que los productos estén disponibles de manera precisa y eficiente, evitando problemas como la sobreventa y asegurando una buena experiencia para los clientes en un e-commerce.
+

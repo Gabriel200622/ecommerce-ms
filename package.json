@@ -1,0 +1,10 @@
+{
+  "name": "bigecommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm dev --workspace webapp"
+  },
+  "packageManager": "pnpm@8.6.10"
+}
